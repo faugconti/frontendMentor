@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+:root {
+  --primary_lime_green: hsl(163, 72%, 41%);
+  --primary_bright_red: hsl(356, 69%, 56%);
+  --primary_facebook: hsl(208, 92%, 53%);
+  --primary_twitter: hsl(203, 89%, 53%);
+  /* --primary_instagram: hsl(37, 97%, 70%) to hsl(329, 70%, 58%) */
+  --primary_youtube: hsl(348, 97%, 39%);
+
+  --DARK_veryDarkBlue: hsl(230, 17%, 14%);
+  --DARK_veryDarkBlue2: hsl(232, 19%, 15%);
+  --DARK_desaturatedBlue: hsl(228, 28%, 20%);
+  --DARK_desaturatedBlue_2: hsl(228, 34%, 66%);
+  --DARK_white: hsl(0, 0%, 100%);
+  --hide: none;
+}
+
+.dark {
+  --font: hsl(0, 0%, 100%);
+  --font2: hsl(228, 34%, 66%);
+  --background_big: hsl(230, 17%, 14%);
+  --card_background: hsl(228, 28%, 20%);
+  --card_background_hover: rgba(138, 150, 197, 0.3);
+  --header_subtitle: hsl(228, 34%, 66%);
+  --bar: hsl(228, 28%, 20%);
+  --border_left: hsl(203, 89%, 53%);
+  --border: hsl(146, 68%, 55%);
+  --button: linear-gradient(
+    90deg,
+    hsl(210, 78%, 56%) 2%,
+    hsl(146, 68%, 55%) 100%
+  );
+}
+.light {
+  /* --font: rgb(82, 82, 82); */
+  --font: black;
+  --font2: rgb(116, 116, 116);
+  /* --font2: red; */
+  --bar: hsl(228, 34%, 66%);
+  --background_big: white;
+  --card_background: rgba(138, 150, 197, 0.3);
+  --card_background_hover: hsla(0, 3%, 92%, 0.87);
+  --button: hsla(0, 3%, 92%, 0.87);
+  --border: hsla(0, 3%, 92%, 0.87);
+  --border_left: hsla(0, 3%, 92%, 0.87);
+}
+
+body {
+  background-color: var(--background_big);
+  color: var(--font);
+  font-family: "Inter", sans-serif;
+  transition: background-color 200ms ease-in 200ms;
+}
+
+main {
+  margin: 1.5rem;
+}
+
+header {
+}
+
+header .header__title {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  border-bottom: 0.5px solid var(--bar);
+}
+
+header .header__title h2 {
+  font-size: 1.3rem;
+  transition: color 200ms ease-in 200ms;
+}
+header .header__title p {
+  color: var(--font2);
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+header .mode__selector {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .mode__selector .selector {
+  display: flex;
+  height: 1.5rem;
+  width: 3.25rem;
+  border-radius: 20px;
+  background: var(--button);
+}
+header .mode__selector .selector.left {
+  justify-content: flex-end;
+}
+header .mode__selector .selector .toggle {
+  border-radius: 100%;
+  border: 2px solid var(--border);
+  height: 100%;
+  width: 1.5rem;
+  background-color: var(--DARK_white);
+}
+header .mode__selector .selector .toggle.left {
+  /* justify-self: flex-end; */
+  /* align-self: flex-end; */
+  /* border-color: hsl(146, 68%, 55%); */
+  border-color: var(--border);
+}
+header .mode__selector h4 {
+  color: var(--DARK_desaturatedBlue_2);
+}
+
+/***** ANALYTICS *******/
+
+section.analytics {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+section.analytics .analytics__card::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0.3rem;
+}
+section.analytics .analytics__card:nth-child(1):before {
+  background-color: var(--primary_facebook);
+}
+
+section.analytics .analytics__card:nth-child(2):before {
+  background-color: var(--primary_twitter);
+}
+
+section.analytics .analytics__card:nth-child(3):before {
+  background: rgb(199, 183, 158);
+  background: linear-gradient(
+    90deg,
+    rgba(199, 183, 158, 1) 0%,
+    rgba(227, 95, 163, 1) 100%
+  );
+}
+
+section.analytics .analytics__card:nth-child(4):before {
+  background-color: var(--primary_youtube);
+}
+section.analytics .analytics__card {
+  background-color: var(--card_background);
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  /* height: 11rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: background-color 200ms ease-in 200ms;
+}
+section.analytics .analytics__card:hover {
+  background-color: var(--card_background_hover);
+}
+section.analytics .analytics__card .analytics__card-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.75rem;
+}
+section.analytics .analytics__card .analytics__card-user h5 {
+  margin-left: 0.25rem;
+  font-size: 0.8rem;
+  color: var(--DARK_desaturatedBlue_2);
+}
+section.analytics .analytics__card .number {
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-weight: bold;
+  transition: color 200ms ease-in 200ms;
+}
+section.analytics .analytics__card .followers {
+  letter-spacing: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--DARK_desaturatedBlue_2);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+section.analytics .analytics__card .suscribers {
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 1.25rem 0rem;
+}
+section.analytics .analytics__card img {
+  margin-right: 0.25rem;
+}
+section.analytics .analytics__card p {
+  font-size: 14px;
+  font-weight: 700;
+}
+.green {
+  font-weight: 900;
+  color: var(--primary_lime_green);
+}
+.red {
+  font-weight: 900;
+  color: var(--primary_bright_red);
+}
+
+/****** OVERVIEW *****/
+
+section.overview {
+}
+main h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  transition: color 200ms ease-in 200ms;
+}
+
+section.overview .overview__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  background: var(--card_background);
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  padding: 1.25rem;
+  transition: background-color 200ms ease-in 200ms;
+}
+section.overview .overview__card:hover {
+  background-color: var(--card_background_hover);
+}
+section.overview .overview__card .top,
+section.overview .overview__card .bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  width: 100%;
+}
+section.overview .overview__card .bottom {
+  margin-top: 1.5rem;
+  transition: color 200ms ease-in 200ms;
+}
+section.overview .overview__card .bottom p {
+  font-size: 1.75rem;
+  font-weight: 900;
+}
+section.overview .overview__card .top p {
+  color: Var(--font2);
+  font-weight: 900;
+  transition: color 200ms ease-in 200ms;
+
+  font-size: 0.85rem;
+}
+section.overview .overview__card .bottom__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.overview .overview__card .bottom__container p {
+  margin-left: 0.25rem;
+  font-size: 13px;
+}
+
+@media screen and (min-width: 950px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  main {
+    margin: 0rem 0;
+    width: 85%;
+  }
+  header .header__title {
+    border: none;
+  }
+  header .mode__selector {
+    position: relative;
+    bottom: 5rem;
+    /* margin-bottom: 4rem; */
+    justify-content: flex-end;
+  }
+  header .mode__selector h4 {
+    /* display: none; */
+    margin-right: 1rem;
+  }
+  section.analytics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2rem;
+  }
+  section.analytics .analytics__card {
+    height: 100%;
+    margin: 0;
+  }
+  section.overview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    /* justify-items: right; */
+    align-items: center;
+  }
+  section.overview .overview__card {
+    height: 100%;
+    margin: 0;
+  }
+  section.overview .overview__card .bottom .bottom__container {
+    align-self: flex-end;
+    margin-bottom: 0.2rem;
+  }
+}
+@media screen and (min-width: 1450px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    margin-bottom: 10%;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  body {
+    justify-content: flex-start;
+  }
+  main {
+    margin-top: 10%;
+    height: auto;
+    width: 50%;
+    margin-bottom: 0;
+    /* margin-bottom: 10%; */
+  }
+}
