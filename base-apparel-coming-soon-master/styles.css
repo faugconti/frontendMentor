@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary_desaturated_red: hsl(0, 36%, 70%);
+  --primary_soft_red: hsl(0, 93%, 68%);
+  --neutral_dark_grayish_red: hsl(0, 6%, 24%);
+  --gradient_1: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+  --gradient_2: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%) 0%,
+    hsl(0, 100%, 98%) 60%
+  );
+}
+
+main header {
+  padding: 1.75rem;
+  background-color: white;
+}
+main header img {
+  height: 23px;
+}
+
+main {
+  height: 100%;
+}
+
+main .image {
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./images/hero-mobile.jpg);
+}
+
+main .info {
+  margin-top: 4rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+main .info h1 {
+  font-size: 2.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: var(--neutral_dark_grayish_red);
+  line-height: 2.8rem;
+}
+main .info h1:first-of-type {
+  color: var(--primary_desaturated_red);
+  font-weight: 300;
+}
+
+main .info p {
+  margin-top: 1rem;
+  color: var(--primary_desaturated_red);
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 22px;
+}
+form {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.5rem;
+  border-radius: 20px;
+  box-shadow: inset 0px 0px 0px 1px #e6c6c6;
+  justify-content: space-between;
+}
+
+input[type="email"] {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 1rem 1rem;
+  color: var(--neutral_dark_grayish_red);
+  background-color: transparent;
+}
+
+form button {
+  transform: translate(2px, 0);
+  height: 2rem;
+  border-radius: 25px;
+  width: 90px;
+  height: 3rem;
+  border: none;
+  outline: none;
+  background: linear-gradient(
+    135deg,
+    hsl(0, 80%, 86%) 0%,
+    hsl(0, 74%, 74%) 100%
+  );
+  box-shadow: 0 10px 20px 0 var(--primary_desaturated_red);
+}
+
+form input[type="email"]::placeholder {
+  color: var(--primary_desaturated_red);
+}
+
+@media screen and (min-width: 854px) {
+  main {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 58% 1fr;
+    grid-template-rows: 10% 1fr;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+    background-image: url(./images/bg-pattern-desktop.svg);
+  }
+
+  main header {
+    padding: 0 17%;
+    /* height: 1rem; */
+    margin-top: 5rem;
+    background-color: transparent;
+  }
+  main header img {
+    height: 2rem;
+  }
+
+  main .image {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    background-image: url(./images/hero-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+  }
+
+  main .info {
+    margin-top: 10rem;
+    text-align: left;
+    padding: 0 17%;
+    align-self: top;
+  }
+
+  main .info h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+    letter-spacing: 1.25rem;
+  }
+  main .info p {
+    font-size: 1rem;
+    min-width: 400px;
+    max-width: 450px;
+  }
+  form {
+    min-width: 400px;
+    max-width: 450px;
+    height: 3.5rem;
+  }
+  form button {
+    width: 130px;
+    height: 3.5rem;
+  }
+
+  input[type="email"]::placeholder {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1427px) {
+  main {
+    background-size: 75%;
+    background-position: bottom left;
+  }
+}

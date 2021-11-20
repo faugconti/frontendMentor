@@ -1,0 +1,425 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*::before {
+  /* border: 0px solid rgb(170, 168, 168); */
+}
+:root {
+  --primary_softRed: hsl(7, 99%, 70%);
+  --primary_yellow: hsl(51, 100%, 49%);
+  --primary_darkDesaturatedCyan: hsl(167, 40%, 24%);
+  --primary_darkBlue: hsl(198, 62%, 26%);
+  --primary_moderateCyan: hsl(168, 34%, 41%);
+
+  --neutral_veryDarkDesaturatedBlue: hsl(212, 27%, 19%);
+  --neutral_veryDarkGrayishBlue: hsl(213, 9%, 39%);
+  --neutral_darkGrayishBlue: hsl(232, 10%, 55%);
+  --neutral_grayishBlue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+}
+
+.hidden {
+  opacity: 0;
+  -webkit-transition: opacity 1s linear;
+  -moz-transition: opacity 0.5s linear;
+  -o-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+}
+
+header {
+  position: fixed;
+  background-color: rgba(61, 191, 254, 100%);
+  z-index: 5;
+  height: 4rem;
+  width: 100%;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+  padding: 0rem 2rem;
+}
+header nav img {
+  cursor: pointer;
+}
+header nav aside.menu::before {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  content: "";
+  box-sizing: border-box;
+  border-width: 20px 0 20px 20px;
+  background-color: transparent transparent;
+  border-style: solid;
+  border-color: transparent transparent white;
+}
+
+header nav aside.menu {
+  position: fixed;
+  top: 4.5rem;
+  height: 18rem;
+  left: 2rem;
+  right: 2rem;
+  background-color: var(--white);
+  -webkit-transition: opacity 1s linear;
+  -moz-transition: opacity 0.2s linear;
+  -o-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+}
+
+header nav aside.menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+header nav aside.menu ul a {
+  list-style: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: inherit;
+  font-weight: 900;
+  color: var(--neutral_grayishBlue);
+}
+header nav aside.menu ul a:last-of-type {
+  padding: 1rem 2rem;
+  background-color: var(--primary_yellow);
+  border-radius: 40px;
+  color: black;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+main section.hero {
+  height: 30rem;
+  /* height:100vh; */
+  background: url(/images/mobile/image-header.jpg);
+  background-position: bottom center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  padding: 0 1.55rem;
+}
+main section.hero h1 {
+  color: var(--white);
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  margin-bottom: 1.25rem;
+  font-family: "Fraunces", serif;
+}
+main section.hero img {
+  margin-top: 0%;
+}
+main section.cards article.card .card__image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 18.5rem;
+}
+main section.cards article.card .card__image.egg {
+  background-image: url(/images/mobile/image-transform.jpg);
+}
+main section.cards article.card .card__image.cup {
+  background-image: url(/images/mobile/image-stand-out.jpg);
+}
+main section.cards article.card .card__image.cherry {
+  background-image: url(/images/mobile/image-graphic-design.jpg);
+}
+main section.cards article.card .card__content {
+  padding: 3rem 2.5rem;
+  text-align: center;
+}
+
+main section.cards article.card .card__content h2 {
+  font-family: "Fraunces", serif;
+  font-family: 900;
+  font-size: 1.7rem;
+  padding: 0 1rem;
+  margin-bottom: 1.25rem;
+}
+main section.cards article.card .card__content p {
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--neutral_darkGrayishBlue);
+  line-height: 1.5rem;
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+}
+
+main section.cards article.card .card__content a {
+  color: black;
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 0.85rem;
+  /* word-spacing: 0.1rem; */
+  text-decoration: none;
+}
+
+main section.cards article.card.large {
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* padding-top: 24rem; */
+  height: 37rem;
+}
+
+main section.cards article.card.large.cherry {
+  color: var(--primary_darkDesaturatedCyan);
+  background-image: url(./images/mobile/image-graphic-design.jpg);
+}
+main section.cards article.card.large.orange {
+  color: var(--primary_darkBlue);
+  background-image: url(./images/mobile/image-photography.jpg);
+}
+main section.cards article.card.large .card__content {
+  padding: 10% 2rem;
+}
+
+main section.cards article.card.large .card__content p {
+  color: inherit;
+  font-size: 0.9rem;
+}
+
+main section.testimonials {
+  padding: 3rem 2.55rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+main section.testimonials h3 {
+  color: var(--neutral_grayishBlue);
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.275rem;
+  margin-bottom: 2rem;
+}
+main section.testimonials .testimonials__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main section.testimonials .testimonials__container .testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+main section.testimonials .testimonials__container .testimonial img {
+  border-radius: 100%;
+  height: 4rem;
+  margin-bottom: 1.5rem;
+}
+main section.testimonials .testimonials__container .testimonial p {
+  font-weight: 700;
+  color: var(--neutral_veryDarkGrayishBlue);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+main section.testimonials .testimonials__container .testimonial h4 {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+}
+main section.testimonials .testimonials__container .testimonial .rol {
+  color: var(--neutral_grayishBlue);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+main .images {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  /* grid-template-rows: 11.5rem; */
+}
+
+main .images img {
+  height: 100%;
+  width: 100%;
+}
+footer {
+  background-color: rgba(144, 212, 197, 100%);
+  text-align: center;
+  padding: 3rem 0;
+}
+footer > svg {
+  /* padding-bottom: 2rem; */
+  /* width: 12rem; */
+  /* fill: hsl(167, 40%, 24%); */
+  fill: var(--primary_darkDesaturatedCyan);
+  fill-rule: nonzero;
+}
+footer .footer__links ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+footer .footer__links li {
+  text-decoration: none;
+  list-style: none;
+  font-weight: 600;
+  color: var(--primary_moderateCyan);
+}
+
+footer .footer__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+footer .footer__icons img {
+  margin: 0 1rem;
+}
+
+@media screen and (min-width: 670px) {
+  main section.hero {
+    height: 1080px;
+    background-image: url(/images/desktop/image-header.jpg);
+    background-size: cover;
+    justify-content: space-evenly;
+  }
+  main section.hero h1 {
+    /* padding-bottom: 7rem; */
+    padding-top: 3rem;
+    font-size: 5rem;
+  }
+  main section.hero img {
+    padding-bottom: 19rem;
+  }
+  main section.cards {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 40rem 40rem 40rem;
+  }
+  main section.cards article.card {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100%;
+    grid-column: 1/3;
+  }
+  main section.cards article.card .card__image {
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+  }
+  main section.cards article.card .card__image.egg {
+    background-image: url(/images/desktop/image-transform.jpg);
+  }
+
+  main section.cards article.card .card__image.cup {
+    background-image: url(/images/desktop/image-stand-out.jpg);
+    order: 1;
+  }
+  main section.cards article.card.large.cherry {
+    background-image: url(./images/desktop/image-graphic-design.jpg);
+  }
+  main section.cards article.card.large.orange {
+    background-image: url(./images/desktop/image-photography.jpg);
+  }
+  main section.cards article.card .card__content {
+    grid-column: 2/3;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    /* padding: 0; */
+  }
+
+  main section.cards article.card .card__content h2 {
+    font-family: "Fraunces", serif;
+    font-family: 900;
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
+    padding: 0;
+    width: 100%;
+  }
+  main section.cards article.card .card__content p {
+    font-family: inherit;
+    font-weight: 600;
+    color: var(--neutral_darkGrayishBlue);
+    line-height: 1.5rem;
+    font-size: 1.05rem;
+    margin-bottom: 1.25rem;
+    text-align: ce;
+    padding-bottom: 1rem;
+    width: 100%;
+  }
+
+  main section.cards article.card.large {
+    height: auto;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  main section.cards article.card.large .card__content {
+    /* padding: 1rem 0rem; */
+  }
+  main section.cards article.card.large.cherry {
+    grid-column: 1/2;
+  }
+  main section.cards article.card.large.orange {
+    grid-column: 2/3;
+  }
+  main section.testimonials {
+    margin: 5rem auto;
+  }
+  main section.testimonials .testimonials__container {
+    flex-direction: row;
+    margin: 0 4rem;
+  }
+  main section.testimonials .testimonials__container .testimonial {
+    margin: 1.5rem 1.5rem;
+  }
+  main section.testimonials .testimonials__container .testimonial p {
+    font-size: 1.1rem;
+  }
+  main .images {
+    grid-template-columns: repeat(4, 25%);
+    /* grid-template-rows: 25rem; */
+  }
+  main .images img {
+    height: 100%;
+    width: 100%;
+  }
+  footer .footer__links ul {
+    justify-content: center;
+  }
+  footer .footer__links ul li {
+    margin: auto 3rem;
+  }
+}

@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+:root {
+  --primary_strongCyan: hsl(172, 67%, 45%);
+  --neutral_veryDarkCyan: hsl(183, 100%, 15%);
+  --neutral_darkGrayishCyan_1: hsl(186, 14%, 43%);
+  --neutral_darkGrayishCyab_2: hsl(184, 14%, 56%);
+  --neutral_lightGrayishCyan: hsl(185, 41%, 84%);
+  --neutral_lightGrayishCyan_2: hsl(189, 41%, 97%);
+  --neutral_white: hsl(0, 0%, 100%);
+}
+
+body {
+  background: var(--neutral_lightGrayishCyan);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Space Mono", monospace;
+}
+div:first-of-type {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-self: center; */
+}
+h1 {
+  align-self: center;
+  justify-self: center;
+  letter-spacing: 0.75rem;
+  line-height: 2rem;
+  /* margin-bottom: 1rem; */
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: var(--neutral_darkGrayishCyan_1);
+  word-spacing: 1rem;
+}
+
+main {
+  border-radius: 25px;
+  width: 100%;
+  max-width: 375px;
+  background-color: var(--neutral_white);
+  padding: 1rem 2rem;
+}
+main section.options .options__name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--neutral_darkGrayishCyan_1);
+  margin-bottom: 0.5rem;
+  margin-top: 1.25rem;
+}
+main section.options input.input1 {
+  border: none;
+  width: 100%;
+  height: 2.5rem;
+  color: var(--neutral_veryDarkCyan);
+  font-family: inherit;
+  outline: inherit;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-align: right;
+  padding-right: 1rem;
+  background: var(--neutral_lightGrayishCyan_2);
+  border-radius: 5px;
+}
+
+main section.options .options__buttons {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-row-gap: 1rem;
+  grid-column-gap: 0.5rem;
+  grid-template-rows: auto;
+}
+main section.options .options__buttons button {
+  border: none;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  background-color: var(--neutral_veryDarkCyan);
+  color: var(--neutral_white);
+  text-align: center;
+  padding: 0.5rem 0rem;
+  font-weight: 700;
+  font-family: inherit;
+  font-size: 1.35rem;
+  cursor: pointer;
+}
+main section.options .options__buttons button:hover,
+main section.options .options__buttons button:active {
+  background-color: var(--primary_strongCyan);
+  color: var(--neutral_veryDarkCyan);
+}
+
+main section.options .options__buttons button.active {
+  background-color: var(--primary_strongCyan);
+  color: var(--neutral_veryDarkCyan);
+}
+
+main section.options .options__buttons input {
+  border: none;
+  border-radius: 4px;
+  height: 3rem;
+  margin-right: 0.5rem;
+  font-weight: 700;
+  font-family: inherit;
+  font-size: 1.35rem;
+  text-align: right;
+  padding-right: 1rem;
+  outline: none;
+  color: var(--neutral_veryDarkCyan);
+  background-color: var(--neutral_lightGrayishCyan_2);
+}
+
+main section.display {
+  margin: 2.5rem 0;
+  margin-bottom: 2rem;
+  background-color: var(--neutral_veryDarkCyan);
+  border-radius: 15px;
+  padding: 2rem 1.25rem;
+  color: var(--neutral_white);
+  display: flex;
+  flex-direction: column;
+}
+
+main section.display .display__container {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+main section.display .display__container div {
+  display: flex;
+  flex-direction: column;
+}
+main section.display .display__container div h3 {
+  font-size: 1rem;
+}
+main section.display .display__container div p {
+  font-size: 0.8rem;
+  color: var(--neutral_darkGrayishCyan_1);
+  font-weight: 700;
+}
+main section.display .display__container h4 {
+  font-size: 2rem;
+  color: var(--primary_strongCyan);
+}
+main section.display button {
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  font-weight: 700;
+  color: var(--neutral_veryDarkCyan);
+  text-transform: uppercase;
+  font-family: inherit;
+  background-color: var(--primary_strongCyan);
+  border-radius: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    justify-content: space-evenly;
+    /* justify-content: flex-start; */
+  }
+  div:first-of-type {
+    flex-grow: 0;
+  }
+  main {
+    min-width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0rem 0;
+    min-height: 20rem;
+  }
+  main section {
+    width: 50%;
+    margin: 2rem;
+    /* flex-basis: 50%; */
+    overflow: hidden;
+  }
+  main section.options {
+    /* width: 50%; */
+  }
+  main section.options .options__buttons {
+    /* grid-template-rows: 2; */
+    row-gap: 1rem;
+    column-gap: 0.5rem;
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: repeat(3, calc(100% / 3)); */
+    grid-template-rows: 1fr 1fr;
+  }
+  main section.options .options__buttons input {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+  main section.display {
+  }
+  main section.display {
+    padding: 0;
+    margin: 2rem;
+  }
+
+  main section.options .options__buttons button {
+    /* margin-left: -0.5rem; */
+    margin: 0;
+  }
+
+  main section.display .display__container {
+    margin: 3rem 1.5rem;
+    /* margin: 3rem 10%; 4k */
+    flex-grow: 0;
+    justify-content: space-between;
+    /* justify-content: space-around; */
+  }
+  main section.display .display__container:nth-of-type(2) {
+    margin-top: 0rem;
+  }
+  main section.display button {
+    width: 85%;
+    align-self: center;
+    justify-self: flex-end;
+    margin-top: auto;
+    margin-bottom: 7%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  main section.display .display__container {
+    margin: 3rem 10%;
+  }
+  main section.display button {
+    width: 80%;
+    /* margin-bottom: 7%; */
+  }
+}

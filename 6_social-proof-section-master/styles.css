@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+:root {
+  --primary_magenta: hsl(300, 43%, 22%);
+  --primary_pink: hsl(333, 80%, 67%);
+  --neutral_dark_magenta: hsl(303, 10%, 53%);
+  --neutral_gray_magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+body {
+  background-image: url(./images/bg-pattern-top-mobile.svg);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: "Spartan", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  margin: 15% 5%;
+}
+
+.container .text {
+  text-align: center;
+}
+.container .text h1 {
+  color: var(--primary_magenta);
+  font-size: 2rem;
+  margin: 0 3rem;
+  font-weight: 700;
+}
+.container .text h3 {
+  color: var(--neutral_dark_magenta);
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.container .rating {
+  margin: 2rem 0;
+}
+.container .rating .rating__card {
+  margin-top: 1rem;
+  border-radius: 5px;
+  padding: 1rem 0;
+  background-color: var(--neutral_gray_magenta);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary_magenta);
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+.container .rating .rating__card .rating__stars {
+  margin-bottom: 0.5rem;
+}
+.reviews .review__card {
+  border-radius: 6px;
+  padding: 2.5rem 2.5rem;
+  background-color: var(--primary_magenta);
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.reviews .review__card .review__card__info {
+  display: flex;
+}
+.reviews .review__card .review__card__info img {
+  width: 50px;
+  border-radius: 50%;
+}
+.reviews .review__card .review__card__info .review__user__data {
+  margin-left: 1.5rem;
+  align-self: center;
+}
+.reviews .review__card .review__card__info .review__user__data h4 {
+  font-size: 0.85rem;
+}
+.reviews .review__card .review__card__info .review__user__data h5 {
+  color: var(--primary_pink);
+  font-weight: 400;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.reviews .review__card .review__card-message {
+  margin-top: 2rem;
+  font-weight: 500;
+  color: var(--neutral_gray_magenta);
+  font-family: "Spartan", sans-serif;
+  line-height: 1.5rem;
+  font-size: 0.9rem;
+}
+@media screen and (min-width: 1280px) {
+  body {
+    background: url(./images/bg-pattern-top-desktop.svg),
+      url(./images/bg-pattern-bottom-desktop.svg);
+    background-size: 40% 60%;
+    background-repeat: no-repeat no-repeat;
+    background-position: top left, bottom right;
+  }
+  .container {
+    margin: 7% 20%;
+    /* background-color: red; */
+    /* position: absolute; */
+    font-size: 0;
+  }
+  .container .text {
+    width: 50%;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    padding-right: 9rem;
+  }
+  .container .text h1 {
+    margin: 0;
+    font-size: 2.4rem;
+  }
+  .container .rating {
+    margin-top: 0rem;
+    display: inline-block;
+    width: 50%;
+  }
+  .container .rating .rating__card {
+    flex-direction: row;
+    /* padding: 0; */
+    /* padding-left: 2rem; */
+    align-items: center;
+    justify-content: left;
+    padding: 1.25rem 0;
+    padding-left: 4%;
+    padding-right: 10%;
+    float: right;
+    font-size: 0.85rem;
+  }
+
+  .container .rating .rating__card:nth-of-type(1) {
+    margin-right: 18%;
+  }
+  .container .rating .rating__card:nth-of-type(2) {
+    margin-right: 9%;
+  }
+  .container .rating .rating__card .rating__stars {
+    margin: 0;
+    margin-right: 1rem;
+  }
+
+  .reviews {
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+    gap: 1.5rem;
+  }
+
+  .reviews .review__card .review__card__info img {
+    width: 35px;
+    border-radius: 50%;
+  }
+
+  .reviews .review__card {
+    padding: 2.25rem 2rem;
+    margin-top: 2rem;
+  }
+  .review__card:nth-of-type(2) {
+    margin-top: 1rem;
+    transform: translateY(2rem);
+  }
+  .review__card:nth-of-type(3) {
+    margin-top: 1rem;
+    transform: translateY(3rem);
+  }
+}

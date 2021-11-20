@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Bright_orange: hsl(31, 77%, 52%);
+  --Dark_cyan: hsl(184, 100%, 22%);
+  --Very_dark_cyan: hsl(179, 100%, 13%);
+  --Transparent_white: hsla(0, 0%, 100%, 0.75);
+  --Very_light_gray: hsl(0, 0%, 95%);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  /* height: 100vh; */
+  color: var(--Very_light_gray);
+  background-color: var(--Very_light_gray);
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 15px;
+}
+
+.container {
+  width: 90%;
+
+  margin: 15% 0;
+  display: grid;
+  grid-template-rows: repeat(3, calc(100% / 3));
+  border-radius: 12px;
+  overflow: auto;
+}
+.block {
+  padding: 2rem 2rem;
+}
+
+.block img {
+  height: 1.8rem;
+}
+
+.container .block .block__info h1 {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+}
+.container .block .block__info p {
+  color: var(--Transparent_white);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.7rem;
+}
+
+.block:first-of-type {
+  background-color: var(--Bright_orange);
+}
+.block:nth-of-type(2) {
+  background-color: var(--Dark_cyan);
+}
+.block:last-of-type {
+  background-color: var(--Very_dark_cyan);
+}
+
+.container .block .block__info p {
+  margin: 1rem 0;
+}
+
+.container .block .block__button {
+  background: var(--Very_light_gray);
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.container .block .block__button.sedan {
+  color: var(--Bright_orange);
+}
+
+.container .block .block__button.sedan:hover {
+  color: var(--Transparent_white);
+  background-color: var(--Bright_orange);
+  border: 2px var(--Transparent_white) solid;
+  font-weight: bold;
+  margin: -2px;
+}
+
+.container .block .block__button.suv {
+  color: var(--Dark_cyan);
+}
+
+.container .block .block__button.suv:hover {
+  color: var(--Transparent_white);
+  background-color: var(--Dark_cyan);
+  font-weight: bold;
+  border: 2px var(--Transparent_white) solid;
+  margin: -2px;
+}
+.container .block .block__button.luxury {
+  color: var(--Very_dark_cyan);
+}
+.container .block .block__button.luxury:hover {
+  color: var(--Transparent_white);
+  background-color: var(--Very_dark_cyan);
+  font-weight: bold;
+  border: 2px var(--Transparent_white) solid;
+  margin: -2px;
+}
+
+@media screen and (min-width: 735px) {
+  body {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    /* height: 100%; */
+    width: 50%;
+    min-width: 720px;
+    grid-template-columns: repeat(3, calc(100% / 3));
+    grid-template-rows: 27rem;
+    /* margin: 15rem 0; */
+  }
+  .container .block {
+    height: 100%;
+    word-spacing: 3px;
+    position: relative;
+  }
+  .container .block img {
+    height: 2.3rem;
+  }
+
+  .container .block .block__info h1 {
+    font-size: 2rem;
+  }
+
+  .container .block .block__info p {
+    font-size: 14px;
+    text-align: justify;
+  }
+  .container .block .block__info {
+    height: 75%;
+  }
+  .container .block .block__button {
+    /* margin-top: 5rem; */
+  }
+}
+
+@media screen and (min-width: 936px) {
+}
