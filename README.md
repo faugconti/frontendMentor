@@ -1,5 +1,6 @@
 # frontendMentor
-some challenges made with static html css
+
+This repo contain some of the FREE Frontend Mentor's challenges made with plain HTML CSS and JS. 
 
 
 | Site | Complexity | Link |
