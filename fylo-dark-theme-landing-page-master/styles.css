@@ -431,6 +431,14 @@ footer .list:nth-last-of-type() {
     margin: 0;
     margin-left: 2rem;
   }
+  footer .lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+  }
+  footer .lists .list:first-of-type .list-container img {
+    margin-bottom: 3.5rem;
+  }
 }
 
 @media screen and (min-width: 3000px) {
