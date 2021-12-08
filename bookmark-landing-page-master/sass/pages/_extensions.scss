@@ -1,0 +1,12 @@
+@use "../util/mixins" as utils;
+
+.wrapper {
+  @include utils.wrapper1;
+  text-align: center;
+  p {
+    margin: 1rem 0;
+    font-size: 98%;
+    line-height: 1.5rem;
+    color: var(--grayishBlue);
+  }
+}

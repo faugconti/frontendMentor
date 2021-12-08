@@ -1,0 +1,50 @@
+@use "../util/mixins";
+
+$btn_color: (
+  blue: var(--softBlue),
+  gray: whitesmoke,
+  danger: var(--softRed),
+);
+
+$btn_size: (
+  large: 15rem,
+  small: 3rem,
+  medium: 10.5rem,
+);
+
+%btn-common {
+  height: 3rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.5rem 0.75rem;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 75%;
+}
+
+@mixin btn_classic($nameColor, $color) {
+  .btn.#{$nameColor} {
+    background-color: $color;
+    border: 1px solid $color;
+    @if ($nameColor == gray) {
+      color: black;
+    } @else {
+      color: white;
+    }
+  }
+}
+
+@each $nameColor, $color in $btn_color {
+  @include btn_classic($nameColor, map-get($btn_color, $nameColor));
+}
+
+@each $name, $size in $btn_size {
+  .btn.#{$name} {
+    width: $size;
+  }
+}
+
+.btn {
+  @extend %btn-common;
+}

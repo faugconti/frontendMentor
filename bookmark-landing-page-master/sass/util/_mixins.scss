@@ -1,0 +1,24 @@
+$breakpoints: (
+  sm: 350px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+);
+
+@mixin media-up($breakpoint) {
+  @if (map-has-key($map: $breakpoints, $key: $breakpoint)) {
+    @media screen and (min-width: map-get($breakpoints,$breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn 'Wrong breakpoint value';
+  }
+}
+
+@mixin wrapper1($gotMax: true) {
+  padding: 0 31px;
+  @if ($gotMax) {
+    max-width: 600px;
+  }
+  margin: 0 auto;
+}

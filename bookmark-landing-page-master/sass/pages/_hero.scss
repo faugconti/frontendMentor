@@ -1,0 +1,122 @@
+@use "../util";
+
+.hero {
+  //   padding-top: 2rem;
+  height: 85vh;
+  margin-top: 5vh;
+  .wrapper {
+    @include util.wrapper1();
+  }
+
+  &__content {
+    @include util.media-up("md") {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: info pict;
+      align-items: center;
+    }
+    @include util.media-up("lg") {
+      margin-top: 10rem;
+    }
+  }
+
+  &__image {
+    position: relative;
+    @include util.media-up("md") {
+      grid-column: 2/3;
+    }
+    // @include util.media-up("lg") {
+    // }
+  }
+  &__img {
+    display: block;
+    width: 95%;
+    max-width: 500px;
+    height: auto;
+    // height: auto;
+    object-fit: cover;
+
+    margin: 0 auto;
+    // margin: 0 -31px;
+    @include util.media-up("md") {
+      max-width: 600px;
+    }
+    @include util.media-up("lg") {
+      max-width: 700px;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+  .image-decoration {
+    width: 80%;
+    max-width: 500px;
+    background-color: var(--softBlue);
+    height: 12rem;
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    bottom: 0rem;
+    border-bottom-left-radius: 100px;
+    // border-top-left-radius: 50%;
+    @include util.media-up("md") {
+      //   background-color: red;
+      width: 50%;
+      height: 80%;
+      bottom: -1rem;
+    }
+    @include util.media-up("lg") {
+      width: 75%;
+      height: 22rem;
+      //   transform: translateX(10rem);
+    }
+  }
+
+  &__info {
+    text-align: center;
+    margin-top: 3rem;
+    h1 {
+      color: var(--veryDarkBlue);
+      font-size: 1.85rem;
+      @include util.media-up("lg") {
+        font-size: 3rem;
+      }
+    }
+    p {
+      margin: 1rem 0;
+      color: var(--grayishBlue);
+      @include util.media-up("lg") {
+        padding-right: 1rem;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+      }
+    }
+    @include util.media-up("md") {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      text-align: left;
+      margin-top: 0;
+    }
+    @include util.media-up("lg") {
+      margin-top: 0;
+      justify-self: right;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+    .btn {
+      margin: 0 0.75rem;
+    }
+    .btn:first-child {
+      margin-left: 0;
+    }
+    @include util.media-up("md") {
+      justify-content: left;
+    }
+  }
+}
