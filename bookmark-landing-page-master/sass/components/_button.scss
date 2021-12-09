@@ -1,4 +1,4 @@
-@use "../util/mixins";
+@use "../util/mixins" as utils;
 
 $btn_color: (
   blue: var(--softBlue),
@@ -11,6 +11,11 @@ $btn_size: (
   small: 3rem,
   medium: 10.5rem,
 );
+$btn_size2: (
+  large: 17rem,
+  small: 5rem,
+  medium: 13rem,
+);
 
 %btn-common {
   height: 3rem;
@@ -21,6 +26,12 @@ $btn_size: (
   white-space: nowrap;
   font-weight: 600;
   font-size: 75%;
+  @include utils.media-up("lg") {
+    font-size: 1rem;
+    height: 4rem;
+    padding: 0.5rem 0.1rem;
+    width: 7rem;
+  }
 }
 
 @mixin btn_classic($nameColor, $color) {
@@ -42,6 +53,9 @@ $btn_size: (
 @each $name, $size in $btn_size {
   .btn.#{$name} {
     width: $size;
+    @include utils.media-up("lg") {
+      width: map-get($btn_size2, $name);
+    }
   }
 }
 

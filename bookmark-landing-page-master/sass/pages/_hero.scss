@@ -69,6 +69,10 @@
       height: 22rem;
       //   transform: translateX(10rem);
     }
+    @include util.media-up("xl") {
+      max-width: 60rem;
+      //   transform: translateX(10rem);
+    }
   }
 
   &__info {

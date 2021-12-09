@@ -21,4 +21,7 @@ $breakpoints: (
     max-width: 600px;
   }
   margin: 0 auto;
+  @include media-up(xl) {
+    padding: 0;
+  }
 }

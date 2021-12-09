@@ -2,6 +2,7 @@
 @use "./layout/" as *;
 @use "./pages" as *;
 @use "./components" as *;
+@use "./util/mixins" as mixins;
 
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
 
@@ -13,4 +14,11 @@ body {
   --softRed: hsl(0, 94%, 66%);
   --grayishBlue: hsl(229, 8%, 60%);
   --veryDarkBlue: hsl(229, 31%, 21%);
+}
+
+.desktop {
+  display: none;
+  @include mixins.media-up("md") {
+    display: block;
+  }
 }

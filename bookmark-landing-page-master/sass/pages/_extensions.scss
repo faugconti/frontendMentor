@@ -1,12 +1,75 @@
 @use "../util/mixins" as utils;
 
-.wrapper {
+.wrapperExt {
+  margin-top: 2rem;
   @include utils.wrapper1;
   text-align: center;
+  @include utils.media-up("md") {
+    // margin-top: 12rem;
+    // max-width: 800px;
+    // width: 100%;
+    // background: red;
+  }
+  @include utils.media-up("lg") {
+    margin-top: 12rem;
+    max-width: 1200px;
+    width: 100%;
+  }
   p {
     margin: 1rem 0;
     font-size: 98%;
     line-height: 1.5rem;
     color: var(--grayishBlue);
+    @include utils.media-up("lg") {
+      width: 50%;
+      margin: 0 auto;
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      line-height: 1.7rem;
+    }
+  }
+  h2 {
+    @include utils.media-up("lg") {
+      font-size: 2.5rem;
+      color: var(--veryDarkBlue);
+    }
+  }
+
+  .cards {
+    margin-top: 2rem;
+    @include utils.media-up("lg") {
+      // display: grid;
+      // grid-template-columns: 1fr 1fr 1fr;
+      display: flex;
+      margin-top: 5rem;
+    }
+    .card {
+      padding-top: 3rem;
+      padding-bottom: 1.5rem;
+      border-radius: 17px;
+      max-width: 320px;
+      margin: 0 auto;
+      margin-bottom: 3rem;
+      box-shadow: 0px 7px 10px 1px rgba(rgb(155, 153, 153), 0.25);
+      h3 {
+        margin-top: 2rem;
+        color: var(--darkBlue);
+      }
+      p {
+        text-align: center;
+        margin: 0.25rem auto 0.75rem auto;
+      }
+      .card--separator {
+        margin: 1rem 0;
+        width: 100%;
+      }
+    }
+
+    .card:nth-child(2) {
+      transform: translateY(2.5rem);
+    }
+    .card:nth-child(3) {
+      transform: translateY(5rem);
+    }
   }
 }
