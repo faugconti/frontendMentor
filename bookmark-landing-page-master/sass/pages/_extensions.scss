@@ -44,6 +44,10 @@
       margin-top: 5rem;
     }
     .card {
+      &:hover {
+        transform: scale(105%);
+      }
+      transition: all 0.2s;
       padding-top: 3rem;
       padding-bottom: 1.5rem;
       border-radius: 17px;
@@ -67,9 +71,15 @@
 
     .card:nth-child(2) {
       transform: translateY(2.5rem);
+      &:hover {
+        transform: translateY(2.5rem) scale(105%);
+      }
     }
     .card:nth-child(3) {
       transform: translateY(5rem);
+      &:hover {
+        transform: translateY(5rem) scale(105%);
+      }
     }
   }
 }

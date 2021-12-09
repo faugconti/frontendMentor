@@ -1,0 +1,75 @@
+@use "../util/mixins" as mixins;
+
+footer {
+  background-color: var(--veryDarkBlue);
+
+  .footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include mixins.media-up(xl) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 70%;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+    ul {
+      list-style: none;
+    }
+
+    .footer__links {
+      // width: 100%;
+      margin: 1rem auto;
+
+      @include mixins.media-up(xl) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 1rem 0;
+      }
+      & > * {
+        margin: 2rem auto;
+        text-align: center;
+        color: gainsboro;
+        letter-spacing: 3px;
+        font-weight: 400;
+        font-size: 1.1rem;
+        transition: all 0.2s;
+        cursor: pointer;
+        &:hover {
+          color: var(--softRed);
+        }
+        @include mixins.media-up(xl) {
+          margin: 2rem;
+        }
+      }
+      svg {
+        //   width: 100%;
+      }
+      path {
+        fill: white !important;
+      }
+    }
+    .footer__icons {
+      margin-bottom: 3rem;
+      @include mixins.media-up(xl) {
+      }
+      svg {
+        margin: 0 1.5rem;
+
+        path:hover {
+          cursor: pointer;
+          transition: all 0.2s;
+          fill: var(--softRed) !important;
+        }
+      }
+      @include mixins.media-up(xl) {
+        margin: 0;
+      }
+    }
+  }
+}

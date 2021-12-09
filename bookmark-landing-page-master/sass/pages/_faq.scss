@@ -1,0 +1,83 @@
+@use "../util/mixins" as mixins;
+
+.faqSection {
+  @include mixins.wrapper1;
+  //   max-width: 400px;
+  max-width: 550px;
+
+  margin-top: 10rem;
+  h2 {
+    text-align: center;
+    @include mixins.media-up(lg) {
+      font-size: 2.4rem;
+    }
+  }
+  > p:nth-child(2) {
+    margin: 1rem 0 3rem 0;
+    color: Var(--grayishBlue);
+    text-align: center;
+    @include mixins.media-up(lg) {
+      font-size: 1.2rem;
+      line-height: 1.7rem;
+    }
+  }
+
+  .faqs {
+    .faq {
+      &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgb(228, 225, 225);
+        // padding-bottom: 1rem;
+
+        &--svg {
+          transition: all 0.1s;
+          margin: 1rem 0;
+          cursor: pointer;
+        }
+        h4 {
+          color: var(--veryDarkBlue);
+          margin: 1rem 0;
+          font-weight: 500;
+          //   margin-top: 1rem;
+          cursor: pointer;
+          &:hover {
+            color: var(--softRed);
+          }
+          @include mixins.media-up(lg) {
+            font-size: 1.2rem;
+          }
+        }
+      }
+      &__expand {
+        margin: 1.5rem 0;
+        color: var(--grayishBlue);
+        display: none;
+        @include mixins.media-up(lg) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .faq.active {
+      .faq__header {
+        border: none;
+        &--svg {
+          transform: rotate(180deg);
+          path {
+            stroke: orangered;
+          }
+        }
+      }
+      .faq__expand {
+        margin: 0;
+        display: block;
+      }
+    }
+  }
+  button {
+    margin: 2rem auto;
+    display: block;
+  }
+}

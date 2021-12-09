@@ -10,11 +10,6 @@ nav {
   margin: 0 auto;
   height: 10vh;
 }
-@media screen and (min-width: 1200px) {
-  nav {
-    padding: 0;
-  }
-}
 @media screen and (min-width: 1024px) {
   nav {
     padding: 0 31px;
@@ -22,12 +17,6 @@ nav {
     margin: 0 auto;
   }
 }
-@media screen and (min-width: 1024px) and (min-width: 1200px) {
-  nav {
-    padding: 0;
-  }
-}
-
 .navbar {
   display: flex;
   height: 100%;
@@ -43,11 +32,6 @@ nav {
   padding: 0 31px;
   max-width: 600px;
   margin: 0 auto;
-}
-@media screen and (min-width: 1200px) {
-  .hero .wrapper {
-    padding: 0;
-  }
 }
 @media screen and (min-width: 768px) {
   .hero__content {
@@ -203,11 +187,6 @@ nav {
   max-width: 600px;
   margin: 0 auto;
 }
-@media screen and (min-width: 1200px) {
-  .features .wrapper {
-    padding: 0;
-  }
-}
 @media screen and (min-width: 1024px) {
   .features .wrapper h2 {
     font-size: 2.2rem;
@@ -341,11 +320,6 @@ nav {
   margin: 0 auto;
   margin-top: 4rem;
 }
-@media screen and (min-width: 1200px) {
-  .features__info {
-    padding: 0;
-  }
-}
 @media screen and (min-width: 768px) {
   .features__info {
     text-align: left;
@@ -387,11 +361,6 @@ nav {
   margin: 0 auto;
   text-align: center;
 }
-@media screen and (min-width: 1200px) {
-  .wrapperExt {
-    padding: 0;
-  }
-}
 @media screen and (min-width: 1024px) {
   .wrapperExt {
     margin-top: 12rem;
@@ -430,6 +399,7 @@ nav {
   }
 }
 .wrapperExt .cards .card {
+  transition: all 0.2s;
   padding-top: 3rem;
   padding-bottom: 1.5rem;
   border-radius: 17px;
@@ -437,6 +407,9 @@ nav {
   margin: 0 auto;
   margin-bottom: 3rem;
   box-shadow: 0px 7px 10px 1px rgba(155, 153, 153, 0.25);
+}
+.wrapperExt .cards .card:hover {
+  transform: scale(105%);
 }
 .wrapperExt .cards .card h3 {
   margin-top: 2rem;
@@ -453,8 +426,170 @@ nav {
 .wrapperExt .cards .card:nth-child(2) {
   transform: translateY(2.5rem);
 }
+.wrapperExt .cards .card:nth-child(2):hover {
+  transform: translateY(2.5rem) scale(105%);
+}
 .wrapperExt .cards .card:nth-child(3) {
   transform: translateY(5rem);
+}
+.wrapperExt .cards .card:nth-child(3):hover {
+  transform: translateY(5rem) scale(105%);
+}
+
+.faqSection {
+  padding: 0 31px;
+  max-width: 600px;
+  margin: 0 auto;
+  max-width: 550px;
+  margin-top: 10rem;
+}
+.faqSection h2 {
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .faqSection h2 {
+    font-size: 2.4rem;
+  }
+}
+.faqSection > p:nth-child(2) {
+  margin: 1rem 0 3rem 0;
+  color: Var(--grayishBlue);
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .faqSection > p:nth-child(2) {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+}
+.faqSection .faqs .faq__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e4e1e1;
+}
+.faqSection .faqs .faq__header--svg {
+  transition: all 0.1s;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+.faqSection .faqs .faq__header h4 {
+  color: var(--veryDarkBlue);
+  margin: 1rem 0;
+  font-weight: 500;
+  cursor: pointer;
+}
+.faqSection .faqs .faq__header h4:hover {
+  color: var(--softRed);
+}
+@media screen and (min-width: 1024px) {
+  .faqSection .faqs .faq__header h4 {
+    font-size: 1.2rem;
+  }
+}
+.faqSection .faqs .faq__expand {
+  margin: 1.5rem 0;
+  color: var(--grayishBlue);
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .faqSection .faqs .faq__expand {
+    font-size: 1.2rem;
+  }
+}
+.faqSection .faqs .faq.active .faq__header {
+  border: none;
+}
+.faqSection .faqs .faq.active .faq__header--svg {
+  transform: rotate(180deg);
+}
+.faqSection .faqs .faq.active .faq__header--svg path {
+  stroke: orangered;
+}
+.faqSection .faqs .faq.active .faq__expand {
+  margin: 0;
+  display: block;
+}
+.faqSection button {
+  margin: 2rem auto;
+  display: block;
+}
+
+.contact {
+  height: 15rem;
+  background-color: var(--softBlue);
+}
+
+footer {
+  background-color: var(--veryDarkBlue);
+}
+footer .footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  footer .footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+}
+footer .footer__wrapper ul {
+  list-style: none;
+}
+footer .footer__wrapper .footer__links {
+  margin: 1rem auto;
+}
+@media screen and (min-width: 1200px) {
+  footer .footer__wrapper .footer__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem 0;
+  }
+}
+footer .footer__wrapper .footer__links > * {
+  margin: 2rem auto;
+  text-align: center;
+  color: gainsboro;
+  letter-spacing: 3px;
+  font-weight: 400;
+  font-size: 1.1rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+footer .footer__wrapper .footer__links > *:hover {
+  color: var(--softRed);
+}
+@media screen and (min-width: 1200px) {
+  footer .footer__wrapper .footer__links > * {
+    margin: 2rem;
+  }
+}
+footer .footer__wrapper .footer__links path {
+  fill: white !important;
+}
+footer .footer__wrapper .footer__icons {
+  margin-bottom: 3rem;
+}
+footer .footer__wrapper .footer__icons svg {
+  margin: 0 1.5rem;
+}
+footer .footer__wrapper .footer__icons svg path:hover {
+  cursor: pointer;
+  transition: all 0.2s;
+  fill: var(--softRed) !important;
+}
+@media screen and (min-width: 1200px) {
+  footer .footer__wrapper .footer__icons {
+    margin: 0;
+  }
 }
 
 .btn {
@@ -479,19 +614,41 @@ nav {
 .btn.blue {
   background-color: var(--softBlue);
   border: 1px solid var(--softBlue);
+  transition: background 0.2s;
+  box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.1);
   color: white;
+}
+.btn.blue:hover {
+  background-color: white;
+  color: var(--softBlue);
+  border: 4px solid var(--softBlue);
 }
 
 .btn.gray {
   background-color: whitesmoke;
   border: 1px solid whitesmoke;
+  transition: background 0.2s;
+  box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.1);
   color: black;
+}
+.btn.gray:hover {
+  background-color: white;
+  color: whitesmoke;
+  border: 4px solid whitesmoke;
+  color: var(--grayishBlue);
 }
 
 .btn.danger {
   background-color: var(--softRed);
   border: 1px solid var(--softRed);
+  transition: background 0.2s;
+  box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.1);
   color: white;
+}
+.btn.danger:hover {
+  background-color: white;
+  color: var(--softRed);
+  border: 4px solid var(--softRed);
 }
 
 .btn.large {
