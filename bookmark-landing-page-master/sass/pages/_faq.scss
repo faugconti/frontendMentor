@@ -51,9 +51,13 @@
         }
       }
       &__expand {
-        margin: 1.5rem 0;
+        // margin: 1.5rem 0;
+        margin: 0;
         color: var(--grayishBlue);
-        display: none;
+        visibility: hidden;
+        height: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
         @include mixins.media-up(lg) {
           font-size: 1.2rem;
         }
@@ -73,6 +77,10 @@
       .faq__expand {
         margin: 0;
         display: block;
+        visibility: visible;
+        height: auto;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
       }
     }
   }

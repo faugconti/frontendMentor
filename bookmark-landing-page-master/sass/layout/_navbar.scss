@@ -3,8 +3,16 @@
 nav {
   @include wrapper1(false);
   height: 10vh;
+  @include media-up(md) {
+    max-width: 500px;
+  }
   @include media-up(lg) {
-    @include wrapper1;
+    max-width: 800px;
+  }
+  @include media-up(xl) {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
   }
 }
 .navbar {

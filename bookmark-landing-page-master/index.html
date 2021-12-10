@@ -11,6 +11,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <script defer src="./index.js"></script>
     <link rel="stylesheet" href="./dist/css/styles.css" />
     <title>Frontend Mentor | Bookmark landing page</title>
   </head>
@@ -234,11 +235,13 @@
       <button class="btn blue md">More Info</button>
     </section>
     <section class="contact">
-      <h5>35,000 + ALREADY JOINED</h5>
+      <h6>35,000 + ALREADY JOINED</h6>
       <h2>Stay up-to-date with what we're doing</h2>
       <form>
-        <input type="email" placeholder="Enter your email address" />
-        <button class="">Contact Us</button>
+        <div class="inputContainer">
+          <input type="email" placeholder="Enter your email address" />
+        </div>
+        <button class="btn large danger">Contact Us</button>
       </form>
     </section>
     <footer>
