@@ -15,5 +15,6 @@ This repo contain some of the FREE Frontend Mentor's challenges made with plain 
 | Crowdfunding product  | Junior  | https://faugconti.github.io/frontendMentor/crowdfunding-product-page-main/ |
 | Fylo Dark theme  | Junior  | https://faugconti.github.io/frontendMentor/fylo-dark-theme-landing-page-master/ |
 | EasyBank landing Page  | Intermediate  | https://faugconti.github.io/frontendMentor/easybank-landing-page-master/ |
+| Bookmark landing Page  | Intermediate  | https://faugconti.github.io/frontendMentor/bookmark-landing-page-master |
 
 
