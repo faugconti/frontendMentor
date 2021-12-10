@@ -199,6 +199,12 @@ nav {
   margin: 0 auto;
 }
 @media screen and (min-width: 1024px) {
+  .features .wrapper {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1024px) {
   .features .wrapper h2 {
     font-size: 2.2rem;
   }
