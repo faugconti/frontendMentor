@@ -16,6 +16,6 @@ This repo contain some of the FREE Frontend Mentor's challenges made with plain 
 | Fylo Dark theme  | Junior  | https://faugconti.github.io/frontendMentor/fylo-dark-theme-landing-page-master/ |
 | EasyBank landing Page  | Intermediate  | https://faugconti.github.io/frontendMentor/easybank-landing-page-master/ |
 | Bookmark landing Page  | Intermediate  | https://faugconti.github.io/frontendMentor/bookmark-landing-page-master |
-| Single Price Component  | Newbie  | https://github.com/faugconti/frontendMentor/tree/main/single-price-grid-component-master |
+| Single Price Component  | Newbie  | https://faugconti.github.io/frontendMentor/single-price-grid-component-master |
 
 
