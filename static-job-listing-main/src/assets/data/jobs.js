@@ -1,4 +1,4 @@
-export default [
+const object = [
   {
     id: 0,
     company: "Photosnap",
@@ -112,3 +112,5 @@ export default [
     tags: ["Frontend", "Junior", "React", "Sass", "JavaScript"],
   },
 ];
+
+export default object;
