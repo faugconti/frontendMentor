@@ -23,7 +23,8 @@
       "react-app/jest"
     ]
   },
-    "homepage":".",
+      "homepage": "https://faugconti.github.io/frontendMentor/",
+
   "browserslist": {
     "production": [
       ">0.2%",
