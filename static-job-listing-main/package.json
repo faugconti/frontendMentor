@@ -23,7 +23,7 @@
       "react-app/jest"
     ]
   },
-      "homepage": "https://faugconti.github.io/frontendMentor/static-job-listing-main/",
+      "homepage": ".",
 
   "browserslist": {
     "production": [
