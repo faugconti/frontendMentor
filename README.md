@@ -17,5 +17,6 @@ This repo contain some of the FREE Frontend Mentor's challenges made with plain 
 | EasyBank landing Page  | Intermediate  | https://faugconti.github.io/frontendMentor/easybank-landing-page-master/ |
 | Bookmark landing Page  | Intermediate  | https://faugconti.github.io/frontendMentor/bookmark-landing-page-master |
 | Single Price Component  | Newbie  | https://faugconti.github.io/frontendMentor/single-price-grid-component-master |
+| Testimonials Grid Section  | Junior  | https://faugconti.github.io/frontendMentor/testimonials-grid-section-main/ |
 
 
