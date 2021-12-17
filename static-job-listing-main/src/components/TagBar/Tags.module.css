@@ -1,0 +1,12 @@
+.Tags {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 680px) {
+  .Tags {
+    margin-left: auto;
+    justify-content: flex-end;
+  }
+}

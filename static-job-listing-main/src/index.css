@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
+html {
+  height: 100%;
+  /* width: 100vw; */
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  background: var(--lightGrayCyan);
+  font-family: "Spartan", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+:root {
+  --DarkCyan: hsl(180, 29%, 50%);
+  --lightGrayCyan: hsl(180, 52%, 96%);
+  --lightGrayCyanTablet: hsl(180, 31%, 95%);
+  --darkGrayCyan: hsl(180, 8%, 52%);
+  --veryDarkGrayCyan: hsl(180, 14%, 20%);
+}
+
+header {
+  background-color: var(--DarkCyan);
+  background-image: url(./assets/images/bg-header-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 156px;
+}
+
+main {
+  height: 100%;
+  position: relative;
+}
+
+.Card {
+  width: 90%;
+  max-width: 1200px;
+
+  background: white;
+  margin: 4rem auto;
+  border-radius: 10px;
+  position: relative;
+  /* overflow: hidden; */
+  padding: 1.25rem;
+  box-shadow: -1px 5px 10px 0px rgba(75, 153, 167, 0.3);
+}
+
+.Card.featured ::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: var(--DarkCyan);
+}
+
+.Card img {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  height: 50px;
+}
+
+.card__title {
+  margin: 0.75rem 0;
+  font-size: 1.05rem;
+  color: var(--veryDarkGrayCyan);
+}
+
+.label {
+  border-radius: 15px;
+  padding: 8px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  width: auto;
+  color: white;
+  margin: 0 0.25rem;
+}
+.label.new {
+  background-color: var(--DarkCyan);
+}
+
+.label.featured {
+  background-color: var(--veryDarkGrayCyan);
+}
+
+.card__header {
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.card__header .card__company {
+  color: var(--DarkCyan);
+  margin-right: 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.card__features {
+  display: flex;
+  flex-direction: row;
+  color: var(--darkGrayCyan);
+  font-size: 0.8rem;
+  margin: 1rem 0;
+}
+
+.card__features .card__features--feature {
+  margin-right: 1rem;
+}
+
+.card__features .card__features--feature.bullet {
+  display: list-item; /* This has to be "list-item"                                               */
+  list-style-type: disc; /* See https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type     */
+  list-style-position: inside;
+}
+
+@media screen and (min-width: 680px) {
+  header {
+    background-image: url(./assets/images/bg-header-desktop.svg);
+    background-size: cover;
+    background-position: bottom 1000px;
+  }
+  .Card {
+    display: flex;
+    align-items: center;
+  }
+
+  .Card img {
+    position: relative;
+    transform: none;
+    height: 95px;
+    margin-right: 1rem;
+  }
+
+  .Card .Card__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+  }
+  .Card .card__tags {
+  }
+}

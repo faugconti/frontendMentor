@@ -1,0 +1,61 @@
+.filterContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 7rem;
+}
+.activeFilters {
+  opacity: 1;
+  transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  top: 0;
+  position: absolute;
+  border-radius: 5px;
+  background: white;
+  transform: translateY(-50%);
+  list-style: none;
+  padding: 1rem;
+}
+.FilterList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Tag {
+  font-weight: 700;
+  background-color: var(--lightGrayCyanTablet);
+  border-radius: 5px;
+  /* padding: 0.5rem; */
+  color: var(--DarkCyan);
+  margin: 0.25rem;
+  margin-left: 0;
+  margin-right: 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  overflow: hidden;
+  padding-left: 0.5rem;
+}
+.Tag button {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  height: 100%;
+  border: none;
+  padding: 0.5rem;
+  vertical-align: middle;
+  background-color: var(--DarkCyan);
+}
+.Tag svg path {
+  fill-rule: white;
+}
+.clear {
+  color: var(--darkGrayCyan);
+  cursor: pointer;
+  font-weight: 700;
+}
