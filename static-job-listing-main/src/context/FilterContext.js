@@ -7,7 +7,7 @@ export const FilterContext = createContext({
   dispatch: () => {},
 });
 
-export default ({ children }) => {
+export default function func({ children }){
   const [filters, dispatch] = useReducer(FilterReducer, []);
 
   return (
