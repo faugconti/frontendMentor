@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --softMagenta: hsl(300, 69%, 71%);
+}
+
+body {
+  height: 100vh;
+  background-image: url(./images/bg-mobile.svg);
+  background-color: var(--violet);
+  background-repeat: no-repeat;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  width: 85%;
+  margin: 0 auto;
+}
+
+header img {
+  height: 30px;
+  margin: 2rem auto;
+}
+
+main {
+  width: 85%;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+main img {
+  width: 100%;
+  object-fit: cover;
+}
+
+main article {
+  color: white;
+  text-align: center;
+}
+
+main article h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+main article p {
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+}
+
+main article button {
+  padding: 0.75rem 3rem;
+  width: 70%;
+  border: none;
+  color: var(--violet);
+  font-family: inherit;
+  font-weight: 400;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0px 1px 5px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s ease-in;
+}
+main article button:hover,
+main article button:active {
+  background-color: var(--softMagenta);
+  color: white;
+  transition: all 0.4s ease-in 0.1s;
+}
+
+@media screen and (min-width: 680px) {
+  body {
+    background-size: cover;
+    height: 100vh;
+  }
+
+  header {
+    max-width: 1200px;
+  }
+  main {
+    height: 85vh;
+    max-width: 1200px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  main img {
+    width: 50%;
+    object-fit: contain;
+    margin-right: 1rem;
+  }
+  main article {
+    width: 50%;
+    margin-left: 1rem;
+    text-align: left;
+  }
+  main article h2 {
+    font-size: 2.75rem;
+  }
+  main article button {
+    width: 30%;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  main article h2 {
+    margin-top: -2rem;
+  }
+}
