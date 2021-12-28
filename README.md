@@ -19,5 +19,5 @@ This repo contain some of the FREE Frontend Mentor's challenges made with plain 
 | Single Price Component  | Newbie  | https://faugconti.github.io/frontendMentor/single-price-grid-component-master |
 | Testimonials Grid Section  | Junior  | https://faugconti.github.io/frontendMentor/testimonials-grid-section-main/ |
 | Static Job Listing| Intermediate | https://cranky-booth-540148.netlify.app/ |
-
+| Huddle Landing Page | Newbie | https://faugconti.github.io/frontendMentor/huddle-landing-page-with-single-introductory-section-master|
 
